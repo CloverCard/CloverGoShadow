@@ -74,7 +74,6 @@ public class ItemHelper {
         }
         List<Stats> forms = rand.getForms(false);
         Stats form = forms.get((int) (Math.random()*forms.size()));
-        System.out.println(form.getName());
         if(!Config.CONFIG.getShadowFormWhiteList().contains(form.getName())) form = rand.getDefaultForm();
         String formName = form.getName();
         if(rand.getDefaultForm().is(form)) formName = "Default";
