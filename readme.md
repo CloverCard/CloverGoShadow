@@ -78,7 +78,7 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
 
 <table>
   <tr>
-   <td>/clovergoshadow purify
+   <td>/clovergoshadow purify [slot]
    </td>
    <td>Purifies a Shadow Pokemon that is at least level 50.
    </td>
