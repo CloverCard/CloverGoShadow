@@ -1,0 +1,23 @@
+{
+  "ribbon.clovergoshadow.purifiedribbon.title": "Purified ",
+  "ribbon.clovergoshadow.purifiedribbon": "Purified Ribbon",
+  "ribbon.clovergoshadow.purifiedribbon.description": "Identifies a Pokemon that has overcome great suffering.",
+  "ribbon.clovergoshadow.shadowribbon.title": "Shadow ",
+  "ribbon.clovergoshadow.shadowribbon": "Shadow Ribbon",
+  "ribbon.clovergoshadow.shadowribbon.description": "Identifies a Pokemon empowered by great suffering.",
+  "ribbon.clovergoshadow.apexribbon.title": "Apex Shadow ",
+  "ribbon.clovergoshadow.apexribbon": "Apex Shadow Ribbon",
+  "ribbon.clovergoshadow.apexribbon.description": "Identifies a Pokemon empowered by overwhelming suffering.",
+  "ribbon.clovergoshadow.apexribbon2.title": "Apex Purified ",
+  "ribbon.clovergoshadow.apexribbon2": "Apex Purified Ribbon",
+  "ribbon.clovergoshadow.apexribbon2.description": "Identifies a Pokemon that has conquered unimaginable suffering.",
+  "clovergoshadow.spawn": "A Shadow %s has spawned near you!",
+  "clovergoshadow.spawntrainer": "A suspicious looking trainer has spawned near you!",
+  "clovergoshadow.purify.error1": "Could not find the ribbons and/or pokemon needed for this command!",
+  "clovergoshadow.purify.error2": "This Pokemon is not a Shadow Pokemon, so it cannot be purified!",
+  "clovergoshadow.purify.success": "Your pokemon has been purified!",
+  "clovergoshadow.spawner": "Shadow %s Wishing Piece",
+  "clovergoshadow.displaystats": "Your current research level is %s! You need %s exp to level up!",
+  "clovergoshadow.expgain": "Your research level has gained %s exp!",
+  "clovergoshadow.levelgain": "Your research level has levelled up to %s!"
+}

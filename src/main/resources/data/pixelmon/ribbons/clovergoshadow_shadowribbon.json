@@ -1,0 +1,8 @@
+{
+  "type_id": "simple",
+  "id": "clovergoshadow_shadowribbon",
+  "prefix": "ribbon.clovergoshadow.shadowribbon.title",
+  "translation_key": "ribbon.clovergoshadow.shadowribbon",
+  "description": "ribbon.clovergoshadow.shadowribbon.description",
+  "icon": "pixelmon:textures/gui/ribbons/customribbon_1white.png"
+}

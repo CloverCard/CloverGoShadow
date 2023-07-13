@@ -1,0 +1,8 @@
+{
+  "type_id": "simple",
+  "id": "clovergoshadow_apexribbon2",
+  "prefix": "ribbon.clovergoshadow.apexribbon2.title",
+  "translation_key": "ribbon.clovergoshadow.apexribbon2",
+  "description": "ribbon.clovergoshadow.apexribbon2.description",
+  "icon": "pixelmon:textures/gui/ribbons/customribbon_1white.png"
+}
