@@ -33,6 +33,7 @@ Shadow Pokemon are, according to the lore, Pokemon who have been artificially be
 <p>
 This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon friendly format which is highly configurable for singleplayer or multiplayer servers.
 </p>
+<img src="https://cdn.discordapp.com/attachments/319251161343328256/1129137847732015114/image.png"/>
 <hr>
 <h2>Features</h2>
 
