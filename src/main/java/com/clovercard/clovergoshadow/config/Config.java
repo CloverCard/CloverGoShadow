@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Config {
-    public static Config CONFIG = new Config(.01250f, 0.05f, 10f,0.25f, 0.5f, 1.2f, 1.5f, new ArrayList<>(), false, 1, 1.2f, 0.8f, 1.2f, 0.8f, 1, new ArrayList<>(), 100, 10, 10, 5, 50, 25, 5, 15);
+    public static Config CONFIG = new Config(.01250f, 0.05f, 10f,0.25f, 0.5f, 1.2f, 1.5f, new ArrayList<>(), false, 1.2f, 0.8f, 1.2f, 0.8f, 1, new ArrayList<>(), 100, 10, 10, 5, 50, 25, 5, 15);
     private final float shadowSpawnPercent;
     private final float shadowTrainerPercent;
     private final float shadowRaidPiece;
@@ -16,7 +16,6 @@ public class Config {
     private final float purifiedExpGainMultiplier;
     private final float shadowEvGainMultiplier;
     private final float purifiedEvGainMultiplier;
-    private final float shadowBoostHp;
     private final float shadowBoostAttack;
     private final float shadowBoostDefense;
     private final float shadowBoostSpecialAttack;
@@ -33,7 +32,7 @@ public class Config {
     private final int expShadowWildPokemonVictory;
     private final int expShadowRaidPokemonVictory;
     private final List<String> shadowFormWhiteList;
-    public Config(float shadowSpawnPercent, float shadowTrainerPercent, float shadowRaidPiece, float shadowExpGainMultiplier, float shadowEvGainMultiplier, float purifiedExpGainMultiplier, float purifiedEvGainMultiplier, List<String> shadowBlackList, boolean useTranslatables, float shadowBoostHp, float shadowBoostAttack, float shadowBoostDefense, float shadowBoostSpecialAttack, float shadowBoostSpecialDefense, float shadowBoostSpeed, ArrayList<String> shadowFormWhiteList, int baseExp, int expDifPerLevel, int expTrainerVictory, int expShadowPokemonCapture, int expPurifyShadowPokemon, int expShadowPokemonRaidCapture, int expShadowWildPokemonVictory, int expShadowRaidPokemonVictory) {
+    public Config(float shadowSpawnPercent, float shadowTrainerPercent, float shadowRaidPiece, float shadowExpGainMultiplier, float shadowEvGainMultiplier, float purifiedExpGainMultiplier, float purifiedEvGainMultiplier, List<String> shadowBlackList, boolean useTranslatables, float shadowBoostAttack, float shadowBoostDefense, float shadowBoostSpecialAttack, float shadowBoostSpecialDefense, float shadowBoostSpeed, ArrayList<String> shadowFormWhiteList, int baseExp, int expDifPerLevel, int expTrainerVictory, int expShadowPokemonCapture, int expPurifyShadowPokemon, int expShadowPokemonRaidCapture, int expShadowWildPokemonVictory, int expShadowRaidPokemonVictory) {
         this.shadowSpawnPercent = shadowSpawnPercent;
         this.shadowTrainerPercent = shadowTrainerPercent;
         this.shadowRaidPiece = shadowRaidPiece;
@@ -43,7 +42,6 @@ public class Config {
         this.purifiedEvGainMultiplier = purifiedEvGainMultiplier;
         this.shadowBlackList = shadowBlackList;
         this.useTranslatables = useTranslatables;
-        this.shadowBoostHp = shadowBoostHp;
         this.shadowBoostAttack = shadowBoostAttack;
         this.shadowBoostDefense = shadowBoostDefense;
         this.shadowBoostSpecialAttack = shadowBoostSpecialAttack;
@@ -123,10 +121,6 @@ public class Config {
 
     public boolean isUseTranslatables() {
         return useTranslatables;
-    }
-
-    public float getShadowBoostHp() {
-        return shadowBoostHp;
     }
 
     public float getShadowBoostAttack() {

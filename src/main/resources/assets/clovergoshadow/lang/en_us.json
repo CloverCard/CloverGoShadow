@@ -19,5 +19,15 @@
   "clovergoshadow.spawner": "Shadow %s Wishing Piece",
   "clovergoshadow.displaystats": "Your current research level is %s! You need %s exp to level up!",
   "clovergoshadow.expgain": "Your research level has gained %s exp!",
-  "clovergoshadow.levelgain": "Your research level has levelled up to %s!"
+  "clovergoshadow.levelgain": "Your research level has levelled up to %s!",
+  "clovergoshadow.spawnshadow.error1": "Unable to create specs.",
+  "clovergoshadow.spawnshadow.error2": "Unable to find the pokemon specified.",
+  "clovergoshadow.spawnshadow.error3": "Unable to find the Shadow Type ribbon! Was it removed?",
+  "clovergoshadow.spawnshadow.success": "Spawned shadow pokemon near you!",
+  "clovergoshadow.giveshadow.error1": "Unable to find the player provided!",
+  "clovergoshadow.giveshadow.error2": "Unable to create specs.",
+  "clovergoshadow.giveshadow.error3": "Unable to find the pokemon specified.",
+  "clovergoshadow.giveshadow.error4": "Unable to find the Shadow Type ribbon! Was it removed?",
+  "clovergoshadow.giveshadow.successreceiver": "You received a shadow %s!",
+  "clovergoshadow.giveshadow.successgiver": "You sent %s a shadow %s!"
 }

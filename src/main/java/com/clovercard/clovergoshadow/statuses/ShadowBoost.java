@@ -11,12 +11,11 @@ public class ShadowBoost extends StatusBase {
     public ShadowBoost() { super(StatusType.None); }
     @Override
     public int[] modifyStats(final PixelmonWrapper user, final int[] stats) {
-        stats[BattleStatsType.HP.getBattleStatIndex()] *= Config.CONFIG.getShadowBoostHp();
-        stats[BattleStatsType.ATTACK.getBattleStatIndex()] *= Config.CONFIG.getShadowBoostAttack();
-        stats[BattleStatsType.SPECIAL_ATTACK.getBattleStatIndex()] *= Config.CONFIG.getShadowBoostSpecialAttack();
-        stats[BattleStatsType.DEFENSE.getBattleStatIndex()] *= Config.CONFIG.getShadowBoostDefense();
-        stats[BattleStatsType.SPECIAL_DEFENSE.getBattleStatIndex()] *= Config.CONFIG.getShadowBoostSpecialDefense();
-        stats[BattleStatsType.SPEED.getBattleStatIndex()] *= Config.CONFIG.getShadowBoostSpeed();
+        stats[BattleStatsType.ATTACK.getStatIndex()] *= Config.CONFIG.getShadowBoostAttack();
+        stats[BattleStatsType.SPECIAL_ATTACK.getStatIndex()] *= Config.CONFIG.getShadowBoostSpecialAttack();
+        stats[BattleStatsType.DEFENSE.getStatIndex()] *= Config.CONFIG.getShadowBoostDefense();
+        stats[BattleStatsType.SPECIAL_DEFENSE.getStatIndex()] *= Config.CONFIG.getShadowBoostSpecialDefense();
+        stats[BattleStatsType.SPEED.getStatIndex()] *= Config.CONFIG.getShadowBoostSpeed();
         return stats;
     }
 }

@@ -1,7 +1,9 @@
 package com.clovercard.clovergoshadow;
 
+import com.clovercard.clovergoshadow.commands.GiveShadow;
 import com.clovercard.clovergoshadow.commands.Purify;
 import com.clovercard.clovergoshadow.commands.ShowStats;
+import com.clovercard.clovergoshadow.commands.SpawnShadow;
 import com.clovercard.clovergoshadow.config.Config;
 import com.clovercard.clovergoshadow.listeners.*;
 import com.pixelmonmod.pixelmon.Pixelmon;
@@ -42,6 +44,8 @@ public class CloverGoShadow {
         LOGGER.debug("REGISTERING CLOVERGOSHADOW COMMANDS");
         new Purify(event.getDispatcher());
         new ShowStats(event.getDispatcher());
+        new SpawnShadow(event.getDispatcher());
+        new GiveShadow(event.getDispatcher());
 
         LOGGER.debug("SETTING UP CLOVERGOSHADOW CONFIG");
         Config.load();

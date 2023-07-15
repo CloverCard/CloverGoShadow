@@ -146,12 +146,6 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
    </td>
   </tr>
   <tr>
-   <td>shadowBoostHp
-   </td>
-   <td>Shadow Boost’s HP modifier
-   </td>
-  </tr>
-  <tr>
    <td>shadowBoostAttack
    </td>
    <td>Shadow Boost’s Attack modifier
@@ -261,7 +255,6 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   "purifiedExpGainMultiplier": 1.2,
   "shadowEvGainMultiplier": 0.5,
   "purifiedEvGainMultiplier": 1.5,
-  "shadowBoostHp": 1.0,
   "shadowBoostAttack": 1.2,
   "shadowBoostDefense": 0.8,
   "shadowBoostSpecialAttack": 1.2,
@@ -278,5 +271,5 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   "expShadowWildPokemonVictory": 5,
   "expShadowRaidPokemonVictory": 15,
   "shadowFormWhiteList": []
-}
+} </pre>
 
