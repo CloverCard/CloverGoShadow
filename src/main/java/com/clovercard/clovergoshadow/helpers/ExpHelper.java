@@ -14,17 +14,8 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 public class ExpHelper {
-    /*
-    Level System
-    lvl 0 -> 1 = 100
-    lvl 10 -> 11 = 200
-    lvl 20 -> 21 = 300
-    lvl 30 -> 31 = 400
-    lvl 40 -> 41 = 500
-    lvl 50 -> 0 = 600
-    */
     public static int getLevelExp(int level){
-        return (level*10) + 100;
+        return (level*Config.CONFIG.getExpDifPerLevel()) + Config.CONFIG.getBaseExp();
     }
 
     public static void addExpToPlayer(ServerPlayerEntity player, int amount) {
