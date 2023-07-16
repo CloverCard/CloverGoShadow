@@ -29,11 +29,13 @@ public class CaptureListeners {
             Moveset moves = pokemon.getMoveset();
             moves.setAbility(ability);
             List<ImmutableAttack> eggMoves = new ArrayList<>(pokemon.getForm().getMoves().getEggMoves());
-            for(int i = 0; i < 4; i++) {
-                if(moves.attacks[i] == null) {
-                    int eggMove = (int) Math.floor(Math.random()*eggMoves.size());
-                    moves.set(i, new Attack(eggMoves.get(eggMove)));
-                    eggMoves.remove(eggMove);
+            if(!eggMoves.isEmpty()) {
+                for(int i = 0; i < 4; i++) {
+                    if(moves.attacks[i] == null) {
+                        int eggMove = (int) Math.floor(Math.random()*eggMoves.size());
+                        moves.set(i, new Attack(eggMoves.get(eggMove)));
+                        eggMoves.remove(eggMove);
+                    }
                 }
             }
             ExpHelper.addExpToPlayer(event.getPlayer(), Config.CONFIG.getExpShadowPokemonCapture());
