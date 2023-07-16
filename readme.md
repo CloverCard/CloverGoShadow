@@ -83,10 +83,27 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
    <td>Purifies a Shadow Pokemon that is at least level 50.
    </td>
   </tr>
+   <td>/clovergoshadow purifytarget [player] [slot]
+   </td>
+   <td>Purifies the pokemon in the slot provided (if applicable) of the target player.
+   </td>
+  </tr>
   <tr>
    <td>/clovergoshadow stats
    </td>
    <td>Tells you your current level and the amount of exp you need to level up.
+   </td>
+  </tr>
+   <tr>
+   <td>/clovergoshadow giveshadow [player] [specs]
+   </td>
+   <td>Gives the specified player the shadow form of the pokemon specified in the specs.
+   </td>
+  </tr>
+   <tr>
+   <td>/clovergoshadow spawnshadow [specs]
+   </td>
+   <td>Spawns the shadow pokemon provided in specs on the command user.
    </td>
   </tr>
 </table>
