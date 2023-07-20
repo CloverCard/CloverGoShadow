@@ -30,7 +30,7 @@ public class CaptureListeners {
             moves.setAbility(ability);
             List<ImmutableAttack> eggMoves = new ArrayList<>(pokemon.getForm().getMoves().getEggMoves());
             if(!eggMoves.isEmpty()) {
-                for(int i = 0; i < 4; i++) {
+                for(int i = 0; i < moves.attacks.length; i++) {
                     if(moves.attacks[i] == null) {
                         if(eggMoves.isEmpty()) break;
                         int eggMove = (int) Math.floor(Math.random()*eggMoves.size());
@@ -57,7 +57,7 @@ public class CaptureListeners {
             moves.setAbility(ability);
             List<ImmutableAttack> eggMoves = new ArrayList<>(pokemon.getForm().getMoves().getEggMoves());
             if(!eggMoves.isEmpty()) {
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < moves.attacks.length; i++) {
                     if (moves.attacks[i] == null) {
                         if(eggMoves.isEmpty()) break;
                         int eggMove = (int) Math.floor(Math.random() * eggMoves.size());
