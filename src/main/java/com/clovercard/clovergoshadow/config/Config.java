@@ -63,7 +63,6 @@ public class Config {
             Gson gson = new Gson();
             Reader reader = new FileReader("config/clovergoshadow/config.json");
             CONFIG = gson.fromJson(reader, Config.class);
-
             reader.close();
         } catch (IOException err) {
             if (err instanceof FileNotFoundException) {
