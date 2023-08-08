@@ -27,12 +27,12 @@ public class EVGain {
             int spdef = (int) (event.evYields.getYield(BattleStatsType.SPECIAL_DEFENSE) * mult);
             int spe = (int) (event.evYields.getYield(BattleStatsType.SPEED) * mult);
 
-            if (hp > 0) event.evYields.addToYield(BattleStatsType.HP, -hp);
-            if (atk > 0) event.evYields.addToYield(BattleStatsType.ATTACK, -atk);
-            if (def > 0) event.evYields.addToYield(BattleStatsType.DEFENSE, -def);
-            if (spatk > 0) event.evYields.addToYield(BattleStatsType.SPECIAL_ATTACK, -spatk);
-            if (spdef > 0) event.evYields.addToYield(BattleStatsType.SPECIAL_DEFENSE, -spdef);
-            if (spe > 0) event.evYields.addToYield(BattleStatsType.SPEED, -spe);
+            event.evYields.addToYield(BattleStatsType.HP, hp);
+            event.evYields.addToYield(BattleStatsType.ATTACK, atk);
+            event.evYields.addToYield(BattleStatsType.DEFENSE, def);
+            event.evYields.addToYield(BattleStatsType.SPECIAL_ATTACK, spatk);
+            event.evYields.addToYield(BattleStatsType.SPECIAL_DEFENSE, spdef);
+            event.evYields.addToYield(BattleStatsType.SPEED, spe);
         }
         else if(RibbonHelper.hasRibbon(event.pokemon, type2)) {
             float mult = Config.CONFIG.getPurifiedEvGainMultiplier();
@@ -44,12 +44,12 @@ public class EVGain {
             int spdef = (int) (event.evYields.getYield(BattleStatsType.SPECIAL_DEFENSE) * mult);
             int spe = (int) (event.evYields.getYield(BattleStatsType.SPEED) * mult);
 
-            if (hp > 0) event.evYields.addToYield(BattleStatsType.HP, -hp);
-            if (atk > 0) event.evYields.addToYield(BattleStatsType.ATTACK, -atk);
-            if (def > 0) event.evYields.addToYield(BattleStatsType.DEFENSE, -def);
-            if (spatk > 0) event.evYields.addToYield(BattleStatsType.SPECIAL_ATTACK, -spatk);
-            if (spdef > 0) event.evYields.addToYield(BattleStatsType.SPECIAL_DEFENSE, -spdef);
-            if (spe > 0) event.evYields.addToYield(BattleStatsType.SPEED, -spe);
+            event.evYields.addToYield(BattleStatsType.HP, hp);
+            event.evYields.addToYield(BattleStatsType.ATTACK, atk);
+            event.evYields.addToYield(BattleStatsType.DEFENSE, def);
+            event.evYields.addToYield(BattleStatsType.SPECIAL_ATTACK, spatk);
+            event.evYields.addToYield(BattleStatsType.SPECIAL_DEFENSE, spdef);
+            event.evYields.addToYield(BattleStatsType.SPEED, spe);
         }
     }
 }

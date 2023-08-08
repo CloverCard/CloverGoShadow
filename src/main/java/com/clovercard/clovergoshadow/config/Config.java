@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Config {
-    public static Config CONFIG = new Config(.01250f, 0.05f, 10f,0.25f, 0.5f, 1.2f, 1.5f, new ArrayList<>(), false, 1.2f, 0.8f, 1.2f, 0.8f, 1, new ArrayList<>(), 100, 10, 10, 5, 50, 25, 5, 15);
+    public static Config CONFIG = new Config(.01250f, 0.05f, 10f,0.25f, -0.5f, 1.2f, 0.5f, new ArrayList<>(), false, 1.2f, 0.8f, 1.2f, 0.8f, 1, new ArrayList<>(), 100, 10, 10, 5, 50, 25, 5, 15);
     private final float shadowSpawnPercent;
     private final float shadowTrainerPercent;
     private final float shadowRaidPiece;
