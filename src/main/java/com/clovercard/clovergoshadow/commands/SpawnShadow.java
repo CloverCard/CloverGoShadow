@@ -19,7 +19,7 @@ import net.minecraft.util.text.*;
 public class SpawnShadow {
     public SpawnShadow(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadow")
+                Commands.literal("clovergoshadowadmin")
                         .then(
                                 Commands.literal("spawnshadow")
                                         .then(

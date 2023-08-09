@@ -21,7 +21,7 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 public class GiveShadow {
     public GiveShadow(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadow")
+                Commands.literal("clovergoshadowadmin")
                         .then(
                                 Commands.literal("giveshadow")
                                         .then(

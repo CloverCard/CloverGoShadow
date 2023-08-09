@@ -3,6 +3,7 @@ package com.clovercard.clovergoshadow.listeners;
 import com.clovercard.clovergoshadow.enums.RibbonEnum;
 import com.clovercard.clovergoshadow.helpers.RibbonHelper;
 import com.clovercard.clovergoshadow.statuses.ShadowBoost;
+import com.pixelmonmod.pixelmon.api.enums.ServerCosmetics;
 import com.pixelmonmod.pixelmon.api.events.battles.ApplyBonusStatsEvent;
 import com.pixelmonmod.pixelmon.api.pokemon.ribbon.type.RibbonType;
 import com.pixelmonmod.pixelmon.battles.controller.participants.BattleParticipant;

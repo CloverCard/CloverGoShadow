@@ -30,6 +30,9 @@ public class Purify {
                                         .executes(cmd -> purifyPokemon(cmd.getSource(), IntegerArgumentType.getInteger(cmd, "slot")))
                                 )
                         )
+        );
+        dispatcher.register(
+                Commands.literal("clovergoshadowadmin")
                         .then(Commands.literal("purifytarget")
                                 .then(Commands.argument("player", StringArgumentType.string())
                                         .then(Commands.argument("slot", IntegerArgumentType.integer(1, 6))
