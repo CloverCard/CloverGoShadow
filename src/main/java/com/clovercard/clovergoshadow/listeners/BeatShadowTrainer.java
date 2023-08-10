@@ -18,6 +18,8 @@ public class BeatShadowTrainer {
         List<Pokemon> team = event.trainer.getPokemonStorage().getTeam();
         Pokemon shadow = team.get((int) (Math.random()*team.size()));
         Pokemon clone = PokemonFactory.copy(shadow);
+        if(Config.CONFIG.getShadowBlackList().contains(clone.getSpecies().getName())) return;
+        if(!Config.CONFIG.getShadowFormWhiteList().contains(clone.getForm().getName())) return;
         if(RibbonHelper.getRibbonTypeIfExists(RibbonEnum.SHADOW_RIBBON.getRibbonId()) == null) return;
         clone.addRibbon(RibbonHelper.getRibbonTypeIfExists(RibbonEnum.SHADOW_RIBBON.getRibbonId()));
         clone.setNickname(clone.getTranslatedName());

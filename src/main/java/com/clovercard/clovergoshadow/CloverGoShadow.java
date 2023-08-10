@@ -5,6 +5,7 @@ import com.clovercard.clovergoshadow.commands.Purify;
 import com.clovercard.clovergoshadow.commands.ShowStats;
 import com.clovercard.clovergoshadow.commands.SpawnShadow;
 import com.clovercard.clovergoshadow.config.Config;
+import com.clovercard.clovergoshadow.listeners.BattleStartListener;
 import com.clovercard.clovergoshadow.listeners.*;
 import com.pixelmonmod.pixelmon.Pixelmon;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,7 +26,6 @@ public class CloverGoShadow {
         //Register listeners
         LOGGER.debug("REGISTERING CLOVERGOSHADOW LISTENERS");
         Pixelmon.EVENT_BUS.register(new DetectShadowPokemon());
-        Pixelmon.EVENT_BUS.register(new ApplyBoostsOnBattleStart());
         Pixelmon.EVENT_BUS.register(new SpawnShadowPokemon());
         Pixelmon.EVENT_BUS.register(new ExperienceGain());
         Pixelmon.EVENT_BUS.register(new EVGain());
@@ -36,6 +36,7 @@ public class CloverGoShadow {
         Pixelmon.EVENT_BUS.register(new RaidDenStart());
         Pixelmon.EVENT_BUS.register(new CaptureListeners());
         Pixelmon.EVENT_BUS.register(new BeatShadowPokemon());
+        Pixelmon.EVENT_BUS.register(new BattleStartListener());
     }
 
     @SubscribeEvent

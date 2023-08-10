@@ -74,6 +74,7 @@ public class Config {
                     }
                     File json = new File(path, "config.json");
                     json.createNewFile();
+                    CONFIG.getShadowFormWhiteList().add("");
                     Writer writer = new FileWriter(json);
                     writer.write(gson.toJson(CONFIG));
                     writer.close();

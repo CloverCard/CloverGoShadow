@@ -29,6 +29,7 @@ public class SpawnShadowPokemon {
             if(Math.random() < Config.CONFIG.getShadowSpawnPercent()/100) {
                 Pokemon shadow = action.pokemon;
                 if(Config.CONFIG.getShadowBlackList().contains(shadow.getSpecies().getName())) return;
+                if(!Config.CONFIG.getShadowFormWhiteList().contains(shadow.getForm().getName())) return;
                 shadow.getOrCreatePixelmon().setAggression(Aggression.AGGRESSIVE);
                 RibbonType ribbon = RibbonHelper.getRibbonTypeIfExists(RibbonEnum.SHADOW_RIBBON.getRibbonId());
                 if(ribbon == null) return;
@@ -53,7 +54,7 @@ public class SpawnShadowPokemon {
                 team.forEach(pkm -> pkm.setNickname(new StringTextComponent("Shadow " + pkm.getTranslatedName().getString())));
                 IFormattableTextComponent msg;
                 if(Config.CONFIG.isUseTranslatables()) msg = new TranslationTextComponent("clovergoshadow.spawntrainer");
-                else msg = new StringTextComponent("A suspicious looking trainer spawned near you!");
+                else msg = new StringTextComponent("A suspicious looking trainer spawned at " + event.action.spawnLocation.location.pos.getX() + ", " + event.action.spawnLocation.location.pos.getY() + ", " + event.action.spawnLocation.location.pos.getZ() + "!");
                 msg.setStyle(msg.getStyle().applyFormat(TextFormatting.LIGHT_PURPLE));
                 if(event.action.spawnLocation.cause instanceof ServerPlayerEntity) {
                     ServerPlayerEntity player = (ServerPlayerEntity) event.action.spawnLocation.cause;
