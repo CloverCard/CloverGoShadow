@@ -288,6 +288,6 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   "expShadowPokemonRaidCapture": 25,
   "expShadowWildPokemonVictory": 5,
   "expShadowRaidPokemonVictory": 15,
-  "shadowFormWhiteList": []
+  "shadowFormWhiteList": [""]
 } </pre>
 
