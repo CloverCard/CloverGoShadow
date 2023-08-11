@@ -256,7 +256,7 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   <tr>
    <td>shadowFormWhiteList
    </td>
-   <td>The forms of a pokemon that can spawn as wishing pieces.
+   <td>The forms of a pokemon that can spawn as wishing pieces, wild pokemon, or trainer drops.
    </td>
   </tr>
 </table>
