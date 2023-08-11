@@ -202,7 +202,7 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   <tr>
    <td>shadowBlackList
    </td>
-   <td>Pokemon species listed here will not spawn as wild pokemon or wish pieces
+   <td>Pokemon species listed here will not spawn as wild pokemon, trainer drops, or wish pieces
    </td>
   </tr>
   <tr>
