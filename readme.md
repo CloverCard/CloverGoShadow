@@ -202,7 +202,7 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   <tr>
    <td>shadowBlackList
    </td>
-   <td>Pokemon species listed here will not spawn as wild pokemon or wish pieces
+   <td>Pokemon species listed here will not spawn as wild pokemon, trainer drops, or wish pieces
    </td>
   </tr>
   <tr>
@@ -256,7 +256,7 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   <tr>
    <td>shadowFormWhiteList
    </td>
-   <td>The forms of a pokemon that can spawn as wishing pieces.
+   <td>The forms of a pokemon that can spawn as wishing pieces, wild pokemon, or trainer drops.
    </td>
   </tr>
 </table>
@@ -271,8 +271,8 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   "shadowRaidPiece": 100.0,
   "shadowExpGainMultiplier": 0.25,
   "purifiedExpGainMultiplier": 1.2,
-  "shadowEvGainMultiplier": 0.5,
-  "purifiedEvGainMultiplier": 1.5,
+  "shadowEvGainMultiplier": -0.5,
+  "purifiedEvGainMultiplier": 0.5,
   "shadowBoostAttack": 1.2,
   "shadowBoostDefense": 0.8,
   "shadowBoostSpecialAttack": 1.2,
@@ -288,6 +288,6 @@ This mod seeks to reinterpret the Pokemon Go implementation into a Pixelmon frie
   "expShadowPokemonRaidCapture": 25,
   "expShadowWildPokemonVictory": 5,
   "expShadowRaidPokemonVictory": 15,
-  "shadowFormWhiteList": []
+  "shadowFormWhiteList": [""]
 } </pre>
 
