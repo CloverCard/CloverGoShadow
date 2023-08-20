@@ -19,7 +19,7 @@ import net.minecraft.util.text.*;
 public class SpawnShadow {
     public SpawnShadow(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadowadmin")
+                Commands.literal("clovergoshadowadmin").requires((src) -> src.hasPermission(2))
                         .then(
                                 Commands.literal("spawnshadow")
                                         .then(

@@ -8,7 +8,6 @@ import com.pixelmonmod.pixelmon.api.pokemon.ribbon.type.RibbonType;
 import com.pixelmonmod.pixelmon.battles.controller.participants.BattleParticipant;
 import com.pixelmonmod.pixelmon.battles.controller.participants.PixelmonWrapper;
 import com.pixelmonmod.pixelmon.battles.controller.participants.TrainerParticipant;
-import com.pixelmonmod.pixelmon.entities.npcs.NPCTrainer;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class BattleStartListener {
@@ -23,7 +22,7 @@ public class BattleStartListener {
                     pw.pokemon.addRibbon(ribbonType);
                 }
                 if(RibbonHelper.hasRibbon(pw.pokemon, ribbonType)) {
-                    if(pw.addStatus(new ShadowBoost(), pw)) System.out.println("Added shadow boost to " + pw.pokemon.getSpecies().getName());
+                    if(!RibbonHelper.hasShadowBoost(pw)) pw.getStatuses().add(new ShadowBoost());
                 }
             }
         }
@@ -34,7 +33,7 @@ public class BattleStartListener {
                     pw.pokemon.addRibbon(ribbonType);
                 }
                 if(RibbonHelper.hasRibbon(pw.pokemon, ribbonType)) {
-                    pw.addStatus(new ShadowBoost(), pw);
+                    if(!RibbonHelper.hasShadowBoost(pw)) pw.getStatuses().add(new ShadowBoost());
                 }
             }
         }

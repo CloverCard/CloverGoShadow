@@ -19,7 +19,7 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 public class ShowStats {
     public ShowStats(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadow")
+                Commands.literal("clovergoshadow").requires((src) -> src.hasPermission(0))
                         .then(Commands.literal("stats")
                                 .executes(cmd -> getPlayerResearch(cmd.getSource())))
         );

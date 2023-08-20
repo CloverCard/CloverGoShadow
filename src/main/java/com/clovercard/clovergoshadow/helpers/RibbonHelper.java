@@ -1,11 +1,14 @@
 package com.clovercard.clovergoshadow.helpers;
 
 import com.clovercard.clovergoshadow.enums.RibbonEnum;
+import com.clovercard.clovergoshadow.statuses.ShadowBoost;
 import com.pixelmonmod.api.registry.RegistryValue;
 import com.pixelmonmod.pixelmon.api.pokemon.Pokemon;
 import com.pixelmonmod.pixelmon.api.pokemon.ribbon.Ribbon;
 import com.pixelmonmod.pixelmon.api.pokemon.ribbon.RibbonRegistry;
 import com.pixelmonmod.pixelmon.api.pokemon.ribbon.type.RibbonType;
+import com.pixelmonmod.pixelmon.battles.controller.participants.PixelmonWrapper;
+import com.pixelmonmod.pixelmon.battles.status.StatusBase;
 
 import java.util.List;
 
@@ -75,5 +78,12 @@ public class RibbonHelper {
         if(reg == null) return false;
         if(!reg.getValue().isPresent()) return false;
         return reg.getValue().get().equals(type);
+    }
+
+    public static boolean hasShadowBoost(PixelmonWrapper pkm) {
+        for(StatusBase sts: pkm.getStatuses()) {
+            if(sts instanceof ShadowBoost) return true;
+        }
+        return false;
     }
 }
