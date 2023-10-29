@@ -24,16 +24,16 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 public class Purify {
     public Purify(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadow").requires((src) -> src.hasPermission(0))
-                        .then(Commands.literal("purify")
+                Commands.literal("clovergoshadow")
+                        .then(Commands.literal("purify").requires((src) -> CommandHelper.hasPermission(src, 0, "clovergoshadow.command.purify"))
                                 .then(Commands.argument("slot", IntegerArgumentType.integer(1, 6))
                                         .executes(cmd -> purifyPokemon(cmd.getSource(), IntegerArgumentType.getInteger(cmd, "slot")))
                                 )
                         )
         );
         dispatcher.register(
-                Commands.literal("clovergoshadowadmin").requires((src) -> src.hasPermission(2))
-                        .then(Commands.literal("purifytarget")
+                Commands.literal("clovergoshadow")
+                        .then(Commands.literal("purifytarget").requires((src) -> CommandHelper.hasPermission(src, 2, "clovergoshadow.command.purifytarget"))
                                 .then(Commands.argument("player", StringArgumentType.string())
                                         .then(Commands.argument("slot", IntegerArgumentType.integer(1, 6))
                                                 .executes(cmd -> purifyPokemon(cmd.getSource(), StringArgumentType.getString(cmd, "player"), IntegerArgumentType.getInteger(cmd, "slot"))))

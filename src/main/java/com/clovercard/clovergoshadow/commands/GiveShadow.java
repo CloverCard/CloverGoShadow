@@ -21,9 +21,9 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 public class GiveShadow {
     public GiveShadow(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadowadmin").requires((src) -> src.hasPermission(2))
+                Commands.literal("clovergoshadow")
                         .then(
-                                Commands.literal("giveshadow")
+                                Commands.literal("giveshadow").requires((src) -> CommandHelper.hasPermission(src, 2, "clovergoshadow.command.giveshadow"))
                                         .then(
                                                 Commands.argument("player", StringArgumentType.string())
                                                         .then(

@@ -1,9 +1,6 @@
 package com.clovercard.clovergoshadow;
 
-import com.clovercard.clovergoshadow.commands.GiveShadow;
-import com.clovercard.clovergoshadow.commands.Purify;
-import com.clovercard.clovergoshadow.commands.ShowStats;
-import com.clovercard.clovergoshadow.commands.SpawnShadow;
+import com.clovercard.clovergoshadow.commands.*;
 import com.clovercard.clovergoshadow.config.Config;
 import com.clovercard.clovergoshadow.listeners.BattleStartListener;
 import com.clovercard.clovergoshadow.listeners.*;
@@ -47,6 +44,8 @@ public class CloverGoShadow {
         new ShowStats(event.getDispatcher());
         new SpawnShadow(event.getDispatcher());
         new GiveShadow(event.getDispatcher());
+        new Reload(event.getDispatcher());
+        new ModifyStats(event.getDispatcher());
 
         LOGGER.debug("SETTING UP CLOVERGOSHADOW CONFIG");
         Config.load();

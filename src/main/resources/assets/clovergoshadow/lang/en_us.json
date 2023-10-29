@@ -29,5 +29,7 @@
   "clovergoshadow.giveshadow.error3": "Unable to find the pokemon specified.",
   "clovergoshadow.giveshadow.error4": "Unable to find the Shadow Type ribbon! Was it removed?",
   "clovergoshadow.giveshadow.successreceiver": "You received a shadow %s!",
-  "clovergoshadow.giveshadow.successgiver": "You sent %s a shadow %s!"
+  "clovergoshadow.giveshadow.successgiver": "You sent %s a shadow %s!",
+  "clovergoshadow.reloadedconfig": "Config has been reloaded!",
+  "clovergoshadow.reloadedconfigfailed": "Config has failed to reload!"
 }

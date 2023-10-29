@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemHelper {
     public static ItemStack makeSpawner() {
         ItemStack itemStack = new ItemStack(PixelmonItems.poke_flute);
-        int attempts = 5;
+        int attempts = 10;
         Species rand = PixelmonSpecies.getRandomSpecies(true, true, false);
         while(Config.CONFIG.getShadowBlackList().contains(rand.getName())) {
             if(attempts <= 0) return null;
@@ -24,11 +24,11 @@ public class ItemHelper {
         }
         List<Stats> forms = rand.getForms(false);
         Stats form = forms.get((int) (Math.random()*forms.size()));
-        attempts = 5;
-        while(!Config.CONFIG.getShadowFormWhiteList().contains(form.getName())) {
+        attempts = 10;
+        while(Config.CONFIG.getShadowFormBlackList().contains(form.getName()) || form.isTemporary()) {
             if(attempts <= 0) {
                 form = rand.getDefaultForm();
-                if(!Config.CONFIG.getShadowFormWhiteList().contains(form.getName())) return null;
+                if(Config.CONFIG.getShadowFormBlackList().contains(form.getName())) return null;
                 else break;
             }
             else {
@@ -51,7 +51,7 @@ public class ItemHelper {
     }
     public static ItemStack makeLegendSpawner() {
         ItemStack itemStack = new ItemStack(PixelmonItems.poke_flute);
-        int attempts = 5;
+        int attempts = 10;
         Species rand = PixelmonSpecies.getRandomLegendary();
         while(Config.CONFIG.getShadowBlackList().contains(rand.getName())) {
             if(attempts <= 0) return null;
@@ -60,11 +60,11 @@ public class ItemHelper {
         }
         List<Stats> forms = rand.getForms(false);
         Stats form = forms.get((int) (Math.random()*forms.size()));
-        attempts = 5;
-        while(!Config.CONFIG.getShadowFormWhiteList().contains(form.getName())) {
+        attempts = 10;
+        while(Config.CONFIG.getShadowFormBlackList().contains(form.getName()) || form.isTemporary()) {
             if(attempts <= 0) {
                 form = rand.getDefaultForm();
-                if(!Config.CONFIG.getShadowFormWhiteList().contains(form.getName())) return null;
+                if(Config.CONFIG.getShadowFormBlackList().contains(form.getName())) return null;
                 else break;
             }
             else {

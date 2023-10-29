@@ -29,7 +29,7 @@ public class SpawnShadowPokemon {
             if(Math.random() < Config.CONFIG.getShadowSpawnPercent()/100) {
                 Pokemon shadow = action.pokemon;
                 if(Config.CONFIG.getShadowBlackList().contains(shadow.getSpecies().getName())) return;
-                if(!Config.CONFIG.getShadowFormWhiteList().contains(shadow.getForm().getName())) return;
+                if(Config.CONFIG.getShadowFormBlackList().contains(shadow.getForm().getName())) return;
                 shadow.getOrCreatePixelmon().setAggression(Aggression.AGGRESSIVE);
                 RibbonType ribbon = RibbonHelper.getRibbonTypeIfExists(RibbonEnum.SHADOW_RIBBON.getRibbonId());
                 if(ribbon == null) return;

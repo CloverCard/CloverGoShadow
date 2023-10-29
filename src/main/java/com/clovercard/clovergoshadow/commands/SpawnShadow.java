@@ -19,9 +19,9 @@ import net.minecraft.util.text.*;
 public class SpawnShadow {
     public SpawnShadow(CommandDispatcher<CommandSource> dispatcher) {
         dispatcher.register(
-                Commands.literal("clovergoshadowadmin").requires((src) -> src.hasPermission(2))
+                Commands.literal("clovergoshadow")
                         .then(
-                                Commands.literal("spawnshadow")
+                                Commands.literal("spawnshadow").requires((src) -> CommandHelper.hasPermission(src, 2, "clovergoshadow.command.spawnshadow"))
                                         .then(
                                                 Commands.argument("specs", StringArgumentType.greedyString())
                                                         .executes(cmd -> spawnShadowPokemon(cmd.getSource(), StringArgumentType.getString(cmd, "specs")))

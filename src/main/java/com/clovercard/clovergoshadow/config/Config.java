@@ -31,8 +31,8 @@ public class Config {
     private final int expShadowPokemonRaidCapture;
     private final int expShadowWildPokemonVictory;
     private final int expShadowRaidPokemonVictory;
-    private final List<String> shadowFormWhiteList;
-    public Config(float shadowSpawnPercent, float shadowTrainerPercent, float shadowRaidPiece, float shadowExpGainMultiplier, float shadowEvGainMultiplier, float purifiedExpGainMultiplier, float purifiedEvGainMultiplier, List<String> shadowBlackList, boolean useTranslatables, float shadowBoostAttack, float shadowBoostDefense, float shadowBoostSpecialAttack, float shadowBoostSpecialDefense, float shadowBoostSpeed, ArrayList<String> shadowFormWhiteList, int baseExp, int expDifPerLevel, int expTrainerVictory, int expShadowPokemonCapture, int expPurifyShadowPokemon, int expShadowPokemonRaidCapture, int expShadowWildPokemonVictory, int expShadowRaidPokemonVictory) {
+    private final List<String> shadowFormBlackList;
+    public Config(float shadowSpawnPercent, float shadowTrainerPercent, float shadowRaidPiece, float shadowExpGainMultiplier, float shadowEvGainMultiplier, float purifiedExpGainMultiplier, float purifiedEvGainMultiplier, List<String> shadowBlackList, boolean useTranslatables, float shadowBoostAttack, float shadowBoostDefense, float shadowBoostSpecialAttack, float shadowBoostSpecialDefense, float shadowBoostSpeed, ArrayList<String> shadowFormBlackList, int baseExp, int expDifPerLevel, int expTrainerVictory, int expShadowPokemonCapture, int expPurifyShadowPokemon, int expShadowPokemonRaidCapture, int expShadowWildPokemonVictory, int expShadowRaidPokemonVictory) {
         this.shadowSpawnPercent = shadowSpawnPercent;
         this.shadowTrainerPercent = shadowTrainerPercent;
         this.shadowRaidPiece = shadowRaidPiece;
@@ -47,7 +47,7 @@ public class Config {
         this.shadowBoostSpecialAttack = shadowBoostSpecialAttack;
         this.shadowBoostSpecialDefense = shadowBoostSpecialDefense;
         this.shadowBoostSpeed = shadowBoostSpeed;
-        this.shadowFormWhiteList = shadowFormWhiteList;
+        this.shadowFormBlackList = shadowFormBlackList;
         this.baseExp = baseExp;
         this.expDifPerLevel = expDifPerLevel;
         this.expTrainerVictory = expTrainerVictory;
@@ -58,12 +58,13 @@ public class Config {
         this.expShadowWildPokemonVictory = expShadowWildPokemonVictory;
         CONFIG = this;
     }
-    public static void load() {
+    public static boolean load() {
         try {
             Gson gson = new Gson();
             Reader reader = new FileReader("config/clovergoshadow/config.json");
             CONFIG = gson.fromJson(reader, Config.class);
             reader.close();
+            return true;
         } catch (IOException err) {
             if (err instanceof FileNotFoundException) {
                 try {
@@ -74,15 +75,16 @@ public class Config {
                     }
                     File json = new File(path, "config.json");
                     json.createNewFile();
-                    CONFIG.getShadowFormWhiteList().add("");
                     Writer writer = new FileWriter(json);
                     writer.write(gson.toJson(CONFIG));
                     writer.close();
+                    return true;
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             } else {
                 System.out.println("An error occurred while trying to read the config file!");
+                return false;
             }
         }
     }
@@ -143,8 +145,8 @@ public class Config {
         return shadowBoostSpeed;
     }
 
-    public List<String> getShadowFormWhiteList() {
-        return shadowFormWhiteList;
+    public List<String> getShadowFormBlackList() {
+        return shadowFormBlackList;
     }
 
     public int getBaseExp() {
